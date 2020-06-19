@@ -1,0 +1,98 @@
+/* CSS Variables */
+:root {
+    --primary: #ddd;
+    --dark: #333;
+    --light: #fff;
+    --light-blue: rgb(169, 222, 222);
+    --black: rgb(74, 82, 82);
+    --shadow: 0 1px 5px rgba(104,104,104, 0.8);
+    --title-color: rgb(135, 125, 116);
+}
+
+body {
+    background: var(--primary);
+    margin: 0;
+}
+
+.head-row {
+    margin: 10px;
+    box-shadow: var(--shadow);
+    background: var(--light);
+    text-align: center;
+}
+.head-row h2 {
+    font-family: "Luckiest Guy", sans-serif;
+    text-align: center;
+}
+
+.nav-col {
+    display: block;
+    text-align: center;
+}
+
+.nav-col a {
+    text-decoration: none;
+    font-family: sans-serif;
+    color: rgb(28, 104, 100);
+}
+
+.body-row {
+    /* margin: 10px; */
+    /* margin-left: 30px; */
+    padding:10px;
+    margin: 10px;
+    
+}
+.body-col {
+    display: inline-block;
+    box-shadow: var(--shadow);
+    background: var(--light);
+    justify-content: center;
+    border: 1px solid;
+    height: 100vh;
+    padding: 10px;
+
+}
+.picture {
+    margin: 10px;
+}
+
+h3 { 
+    color: rgb(118, 206, 118)
+}
+.picture img {
+    float: left;
+    width: 30%;
+    height: 30%;
+    margin: 10px;
+ /*   margin-right: 10px; */
+ 
+}
+.paragraph {
+    text-align: justify;
+    /* margin: 10px;
+    padding: 10px; */
+}
+hr {
+    border: 3px solid;
+}
+.footer-row {
+    margin: 10px;
+    box-shadow: var(--shadow);
+    background: var(--light);
+    padding:10px;
+    background: rgb(82, 77, 77);
+}
+.footer-col {
+    color: white;
+    text-align: center;
+    margin: 10px;
+}
+.form-container {
+    padding: 10px;
+}
+/* @media screen and (max-width: 576px) {
+    img {
+        align-items: center;
+    }
+} */
