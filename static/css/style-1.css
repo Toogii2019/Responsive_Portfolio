@@ -5,7 +5,7 @@
     --light: #fff;
     --light-blue: rgb(169, 222, 222);
     --black: rgb(74, 82, 82);
-    --shadow: 0 1px 5px rgba(104,104,104, 0.9);
+    --shadow: 0 1px 5px rgba(104,104,104, 0.8);
     --title-color: rgb(135, 125, 116);
 }
 
@@ -14,21 +14,13 @@ body {
     margin: 0;
 }
 
-.container {
-    display:grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 100px 1fr 100px;
-    gap: 10px;
-}
-
 .head-row {
-    /* margin: 10px; */
+    margin: 10px;
     box-shadow: var(--shadow);
     background: var(--light);
     text-align: center;
-
-    /* padding: 25px; */
 }
+
 .head-row h2 {
     font-family: "Luckiest Guy", sans-serif;
     text-align: center;
@@ -37,17 +29,15 @@ body {
 .nav-col {
     display: block;
     text-align: center;
-    padding-top: 37px;
+}
+.nav-col ul li {
+    display: block;
 }
 
 .nav-col a {
     text-decoration: none;
     font-family: sans-serif;
     color: rgb(28, 104, 100);
-    padding: 41px;
-}
-.nav-col a:hover {
-    background: var(--dark);
 }
 
 .body-row {
@@ -55,22 +45,17 @@ body {
     /* margin-left: 30px; */
     padding:10px;
     margin: 10px;
-    justify-content: center;
-    align-items: center;
     
 }
-
 .body-col {
     display: inline-block;
     box-shadow: var(--shadow);
     background: var(--light);
     justify-content: center;
-    /* border: 1px solid; */
-    height: auto;
-    padding: 10px;
+    height: 100vh;
+    /* padding: 10px; */
 
 }
-
 .picture {
     margin: 10px;
 }
@@ -78,7 +63,6 @@ body {
 h3 { 
     color: rgb(118, 206, 118)
 }
-
 .picture img {
     float: left;
     width: 30%;
@@ -92,11 +76,9 @@ h3 {
     /* margin: 10px;
     padding: 10px; */
 }
-
 hr {
     border: 3px solid;
 }
-
 .footer-row {
     margin: 10px;
     box-shadow: var(--shadow);
@@ -104,18 +86,16 @@ hr {
     padding:10px;
     background: rgb(82, 77, 77);
 }
-
 .footer-col {
     color: white;
     text-align: center;
     margin: 10px;
 }
-
 .form-container {
     padding: 10px;
 }
-@media screen and (max-width: 300px) {
+/* @media screen and (max-width: 576px) {
     img {
         align-items: center;
     }
-}
+} */
