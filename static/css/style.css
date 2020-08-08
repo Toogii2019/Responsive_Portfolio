@@ -1,0 +1,177 @@
+:root {
+    --primary-color: rgba(13, 110, 139, 0.55);
+    --button-color: rgba(17, 70, 87, 0.9);
+    --overlay-color: rgba(24, 39, 51, 0.85);
+    --menu-speed: 0.75s;
+}
+
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.4;
+}
+
+.projects-front > img {
+    width: auto;
+    height: auto;
+}
+
+.container {
+    max-width: 960px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 3rem;
+}
+
+.showcase {
+    background-color: var(--primary-color);
+    color: #fff;
+    height: 100vh;
+    position: relative;
+}
+
+.showcase:before {
+    content: '';
+    background: url("https://images3.alphacoders.com/714/714205.jpg") no-repeat center
+    center/cover;
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.showcase .showcase-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+}
+
+.showcase h1 {
+    font-size: 4rem;
+}
+
+.showcase p {
+    font-size: 1.3rem;
+}
+
+.btn {
+    display: inline-block;
+    border: none;
+    background-color: var(--button-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    margin-top: 1rem;
+    text-decoration: none;
+}
+
+.btn:hover {
+    opacity: 0.7;
+    transition: opacity 1s ease-in;
+}
+
+.my-photo {
+    width:300px;
+    height: 300px;
+    z-index: 0;
+    border: 1px solid;
+    background: var(--primary-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+.projects-front {
+    display: flex;
+    flex-direction: column;
+    transition: opacity 1s ease-in;
+    transition-duration: var(--menu-speed);
+}
+
+.showcase .portfolio-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+
+.project-description {
+    display: none;
+    color: white;
+
+
+
+}
+
+.projects-front:hover {
+    transform: scale(2);
+    align-items: center;
+    justify-content: center;
+
+}
+
+.github-link {
+    color:black;
+    font-weight: bold;
+    bottom: 3px;
+}
+
+.flip-box {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    /* border: 1px solid #f1f1f1; */
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-box-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  /* Style the back side */
+  .flip-box-back {
+    background-color: var(--primary-color);
+    color: rgb(255, 255, 255);
+    transform: rotateY(180deg);
+    padding: 5px;
+  }

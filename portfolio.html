@@ -1,61 +1,86 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>World of Wonders</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="static/css/style-1.css">
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    </head>
-    <body>
-        <div class="container">
-            <div class="head-row row">
-                <div class="nav-col col-lg-3 col-sm-12">
-                    <h2>My Name</h2>
-                </div>
-                <div class="nav-col col-3">
-                </div>                
-                <div class="nav-col col-2">
-                    <a href="index.html">About</a>
-                </div>
-                <div class="nav-col col-2">
-                    <a href="portfolio.html">Portfolio</a>
-                </div>
-                <div class="nav-col col-2">
-                    <a href="contact.html">Contact</a>
-                </div>
-            </div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/menu.css">
 
-            <div class="body-row">
-                <div class="body-col col-lg-12 col-sm-12">
-                    <div class="picture">
-                        <h3> Portfolio </h3>
-                        <hr>
-                        <img src="https://picsum.photos/200/251" alt="Portfolio picture #1">
-                    </div>
-                    <div class="picture">
-
-                        <img src="https://picsum.photos/200/252" alt="Portfolio picture #2">
-                    </div>
-                    <div class="picture">
-
-                        <img src="https://picsum.photos/200/253" alt="Portfolio picture #3">
-                    </div>
-                    <div class="picture">
-
-                        <img src="https://picsum.photos/200/254" alt="Portfolio picture #3">
-                    </div>
-                </div>
-            </div>
-            <div class="footer-row">
-                <div class="footer-col col-12">
-                    <footer>
-                        <p>Toogii &copy 2020</p>
-                    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="static/js/script.js">
+    <title>{% block subtitle %}{% endblock subtitle %}</title>
+</head>
+<body>
+    <div class="menu-wrap">
+        <input type="checkbox" class="toggler">
+        <div class="hamburger"><div></div></div>
+        <div class="menu">
+            <div>
+                <div>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Me</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </body>
+    </div>
+    <div class="showcase">
+        <div class="portfolio-container">
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                  <div class="flip-box-front">
+                    <img src="static/img/pass_gen.gif" alt="password generator app" style="width:300px;height:200px">
+                  </div>
+                  <div class="flip-box-back">
+                    <h2>Password Generator App</h2>
+                    <p>Generates highly secure password</p>
+                    <a class="github-link" href="https://toogii2019.github.io/Password_Generator/">Github Link</a>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-box">
+                <div class="flip-box-inner">
+                  <div class="flip-box-front">
+                    <img src="static/img/code_quiz.gif" alt="code quiz app" style="width:300px;height:200px">
+                  </div>
+                  <div class="flip-box-back">
+                    <h2>Code Quiz App</h2>
+                    <p>Choose between HTML, CSS and Javascript quizes and test your skill</p>
+                    <a class="github-link" href="https://toogii2019.github.io/code_quiz/">Github Link</a>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-box">
+                <div class="flip-box-inner">
+                  <div class="flip-box-front">
+                    <img src="static/img/triply.gif" alt="triply app" style="width:300px;height:200px">
+                  </div>
+                  <div class="flip-box-back">
+                    <h2>Trip Advisor App</h2>
+                    <p>Helps planning your trip</p>
+                    <a class="github-link" href="https://toogii2019.github.io/Project1/">Github Link</a>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-box">
+                <div class="flip-box-inner">
+                  <div class="flip-box-front">
+                    <img src="static/img/weather_dashboard.gif" alt="weather dashboard app" style="width:300px;height:200px">
+                  </div>
+                  <div class="flip-box-back">
+                    <h2>Weather dashboard app</h2>
+                    <p>Shows weather information on selected location</p>
+                    <a class="github-link" href="https://toogii2019.github.io/weather_dashboard/">Github Link</a>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+</body>
 </html>
