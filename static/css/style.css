@@ -124,7 +124,7 @@ a {
 
 }
 
-.github-link {
+.github-link, .deployed-link {
     color:black;
     font-weight: bold;
     bottom: 3px;
