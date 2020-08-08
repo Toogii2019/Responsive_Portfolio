@@ -9,6 +9,7 @@
     box-sizing: border-box;
     margin:0;
     padding:0;
+    font-family: Indie Flower, sans-serif;
 }
 
 body {
@@ -80,7 +81,7 @@ body {
 }
 
 .my-photo {
-    width:300px;
+    width: 380px;
     height: 300px;
     z-index: 0;
     border: 1px solid;
