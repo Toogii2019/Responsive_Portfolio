@@ -1,6 +1,6 @@
 # Responsive_Portfolio
 
-This portfolio page uses pure CSS design - Reference - https://www.youtube.com/watch?v=DZg6UfS5zYg.
+This portfolio page uses pure CSS design
 
 ## Screenshots of the Deployed Website
 
