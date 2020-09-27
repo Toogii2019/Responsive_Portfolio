@@ -2,7 +2,7 @@ var path = require("path");
 var cookieParser = require('cookie-parser');
 var Users = require("../models/admin.js");
 var HighCastle = require("../models/highcastle.js");
-
+const requestIp = require('request-ip');
 const bcrypt = require("bcryptjs");
 const { longStackTraces } = require("bluebird");
 
@@ -10,15 +10,8 @@ const { longStackTraces } = require("bluebird");
 
 module.exports = function(app) {
     app.use(cookieParser());
+    app.use(requestIp.mw())
     app.get("/", function(req, res) {
-      
-      HighCastle.create({
-        address: req.connection.remoteAddress,
-        port: req.connection.remotePort,
-        DateTime: new Date(),
-      }).then(function(results) {
-      })
-    
       res.render("index");
     });
   
@@ -27,6 +20,14 @@ module.exports = function(app) {
     });
 
     app.get("/portfolio", function(req, res) {
+        const remoteIp = req.clientIp;
+        console.log(remoteIp);
+        HighCastle.create({
+          address: remoteIp,
+          port: req.connection.remotePort,
+          DateTime: new Date(),
+        }).then(function(results) {
+        })
         res.render("portfolio");
     });
 
@@ -39,8 +40,6 @@ module.exports = function(app) {
     });
 
     app.post("/admin", function(req, res) {
-        console.log(req.body.username, req.body.password);
-
         Users.findOne({
             where: {
                 username: req.body.username,
