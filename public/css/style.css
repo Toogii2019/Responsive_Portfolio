@@ -174,3 +174,7 @@ a {
     transform: rotateY(180deg);
     padding: 5px;
 }
+
+.admin-form {
+    margin-top: 300px;
+}
