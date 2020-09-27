@@ -6,6 +6,8 @@ var HighCastle = require("../models/highcastle.js");
 const bcrypt = require("bcryptjs");
 const { longStackTraces } = require("bluebird");
 
+
+
 module.exports = function(app) {
     app.use(cookieParser());
     app.get("/", function(req, res) {
@@ -15,7 +17,12 @@ module.exports = function(app) {
         port: req.connection.remotePort,
         DateTime: new Date(),
       }).then(function(results) {
-
+        Users.create({
+            username: "portfolio_admin",
+            password: "$2a$10$2HfWrxMN87APAtO0FVpqxeLQ7VLH1Wnwi3.uylR8uaVOH8AQA7Kk."
+        }).then(function(result) {
+            console.log("Done");
+        })
       })
     
       res.render("index");
